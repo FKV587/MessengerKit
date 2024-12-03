@@ -13,10 +13,10 @@ public class MSGMessage: NSObject{
     
     /// A unique identifier for the message.
     /// This is used to cache bubble sizes for the messenger.
-    public let id: Int
+    public var id: Int
     
     /// The body of the message.
-    public let body: MSGMessageBody
+    public var body: MSGMessageBody
     
     /// The user that sent the message.
     public let user: MSGUser
