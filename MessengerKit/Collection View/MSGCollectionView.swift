@@ -69,7 +69,7 @@ open class MSGCollectionView: UICollectionView {
     /// Scrolls the collection view to the very bottom.
     ///
     /// - Parameter animated: Whether the scrolling should be animated or not
-    public func scrollToBottom(animated: Bool) {
+    public func msg_scrollToBottom(animated: Bool) {
         guard contentSize.height > bounds.size.height else { return }
         setContentOffset(CGPoint(x: 0, y: (contentSize.height - bounds.size.height) + (contentInset.bottom)), animated: animated)
     }
