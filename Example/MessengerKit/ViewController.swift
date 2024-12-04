@@ -71,7 +71,7 @@ class ViewController: MSGMessengerViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        collectionView.scrollToBottom(animated: false)
+        collectionView.msg_scrollToBottom(animated: false)
     }
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
@@ -99,7 +99,7 @@ class ViewController: MSGMessengerViewController {
                 self.collectionView.insertSections([sectionIndex])
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: true)
+            self.collectionView.msg_scrollToBottom(animated: true)
             self.collectionView.layoutTypingLabelIfNeeded()
         })
         
@@ -123,7 +123,7 @@ class ViewController: MSGMessengerViewController {
                 }
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: false)
+            self.collectionView.msg_scrollToBottom(animated: false)
             self.collectionView.layoutTypingLabelIfNeeded()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 callback?()

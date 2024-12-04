@@ -83,7 +83,7 @@ class CustomStyleViewController: MSGMessengerViewController {
                 self.collectionView.insertSections([sectionIndex])
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: true)
+            self.collectionView.msg_scrollToBottom(animated: true)
             self.collectionView.layoutTypingLabelIfNeeded()
         })
         
@@ -107,7 +107,7 @@ class CustomStyleViewController: MSGMessengerViewController {
                 }
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: false)
+            self.collectionView.msg_scrollToBottom(animated: false)
             self.collectionView.layoutTypingLabelIfNeeded()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 callback?()

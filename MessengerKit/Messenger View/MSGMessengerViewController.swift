@@ -53,7 +53,7 @@ open class MSGMessengerViewController: UIViewController {
     private var collectionViewLoaded = false {
         didSet {
             if collectionViewLoaded && shouldScrollToBottom && !oldValue {
-                collectionView.scrollToBottom(animated: false)
+                collectionView.msg_scrollToBottom(animated: false)
             }
         }
     }
@@ -113,7 +113,7 @@ open class MSGMessengerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         if shouldScrollToBottom {
-            collectionView.scrollToBottom(animated: true)
+            collectionView.msg_scrollToBottom(animated: true)
         }
     }
     
@@ -195,7 +195,7 @@ open class MSGMessengerViewController: UIViewController {
     // MARK: - Keyboard
     
     @objc open dynamic func keyboardWillShow(_ notification: Notification) {
-        collectionView.scrollToBottom(animated: false)
+        collectionView.msg_scrollToBottom(animated: false)
     }
     
     // MARK: - Users Typing

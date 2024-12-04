@@ -18,7 +18,7 @@ extension MSGMessengerViewController {
             self.collectionView.insertSections([sectionIndex])
             
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: true)
+            self.collectionView.msg_scrollToBottom(animated: true)
             self.collectionView.layoutTypingLabelIfNeeded()
         })
         
@@ -38,7 +38,7 @@ extension MSGMessengerViewController {
             }
             
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: true)
+            self.collectionView.msg_scrollToBottom(animated: true)
             self.collectionView.layoutTypingLabelIfNeeded()
         })
         

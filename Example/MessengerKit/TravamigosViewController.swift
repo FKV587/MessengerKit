@@ -73,7 +73,7 @@ class TravamigosViewController: MSGMessengerViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        collectionView.scrollToBottom(animated: false)
+        collectionView.msg_scrollToBottom(animated: false)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.setUsersTyping([self.tim])
@@ -108,7 +108,7 @@ class TravamigosViewController: MSGMessengerViewController {
                 self.collectionView.insertSections([sectionIndex])
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: true)
+            self.collectionView.msg_scrollToBottom(animated: true)
             self.collectionView.layoutTypingLabelIfNeeded()
         })
         
@@ -132,7 +132,7 @@ class TravamigosViewController: MSGMessengerViewController {
                 }
             }
         }, completion: { (_) in
-            self.collectionView.scrollToBottom(animated: false)
+            self.collectionView.msg_scrollToBottom(animated: false)
             self.collectionView.layoutTypingLabelIfNeeded()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 callback?()

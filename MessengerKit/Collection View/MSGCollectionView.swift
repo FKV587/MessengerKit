@@ -115,7 +115,7 @@ open class MSGCollectionView: UICollectionView {
         
         // Only scroll the view if the user is already at the bottom
         if bottom >= contentSize.height && contentSize.height > bounds.height {
-            scrollToBottom(animated: true)
+            msg_scrollToBottom(animated: true)
         }
         
     }
